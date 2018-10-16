@@ -2,7 +2,7 @@ public class RationalNumber extends RealNumber{
   private int nume, denom;
 
   public RationalNumber(int n, int d) {
-    super(5);
+    super(5.0);
     nume = n;
     denom = d;
   }
