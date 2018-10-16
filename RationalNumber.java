@@ -19,4 +19,9 @@ public class RationalNumber extends RealNumber{
     return "nada para ahora";
   }
 
+  //override parent method so it can compare rational to real as well
+  public boolean compareTo(RealNumber other) {
+    return false;
+  }
+
 }
