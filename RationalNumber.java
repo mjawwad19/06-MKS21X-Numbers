@@ -99,6 +99,9 @@ public class RationalNumber extends RealNumber
   *reduced after construction.
   */
   private void reduce(){
+    int gcdThis = gcd(getNumerator(), getDenominator());
+    this.numerator = numerator / a;
+    this.denominator = denominator / a;
 
   }
 
@@ -111,26 +114,32 @@ public class RationalNumber extends RealNumber
   *Return a new RationalNumber that is the product of this and the other
   */
   public RationalNumber multiply(RationalNumber other){
-    return null;
+    RationalNumber product = new RationalNumber(getNumerator() * other.getNumerator(), getDenominator() * other.getDenominator()).reduce();
+    return product;
   }
 
   /**
   *Return a new RationalNumber that is the this divided by the other
   */
   public RationalNumber divide(RationalNumber other){
-    return null;
+    RationalNumber otherRecip = other.reciprocal();
+    return multiply(otherRecip);
   }
 
   /**
   *Return a new RationalNumber that is the sum of this and the other
   */
   public RationalNumber add(RationalNumber other){
-    return null;
+    RationalNumber sum = new RationalNumber(getNumerator() * other.getDenominator() + other.getNumerator() * getDenominator(),
+                                            getDenominator() * other.getDenominator()).reduce();
+    return sum;
   }
   /**
   *Return a new RationalNumber that this minus the other
   */
   public RationalNumber subtract(RationalNumber other){
-    return null;
+    RationalNumber sub = new RationalNumber(getNumerator() * other.getDenominator() - other.getNumerator() * getDenominator(),
+                                            getDenominator() * other.getDenominator()).reduce();
+    return sub;
   }
 }
