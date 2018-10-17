@@ -20,7 +20,8 @@ public class RationalNumber extends RealNumber
   }
 
   public double getValue(){
-    return numerator / denominator;
+    return (0.0 + numerator) / denominator;
+    // making the numerator into a double will force the answer to be double
   }
 
   /**
@@ -70,16 +71,16 @@ public class RationalNumber extends RealNumber
     firstI = 0;
     secondI = 0;
     rem = 0;
-    if (b == 0) return a;
+    if (a == b) return a;
     if (a > b) {
-      firstI = b;
-      secondI = a;
-      rem = b % a;
-    }
-    else {
       firstI = a;
       secondI = b;
       rem = a % b;
+    }
+    else {
+      firstI = b;
+      secondI = a;
+      rem = b % a;
     }
     while (rem > 0) {
       firstI = secondI;
@@ -96,9 +97,8 @@ public class RationalNumber extends RealNumber
   */
   private void reduce(){
     int gcdThis = gcd(getNumerator(), getDenominator());
-    this.numerator = numerator / gcdThis;
-    this.denominator = denominator / gcdThis;
-
+    if (numerator % gcdThis == 0) this.numerator = numerator / gcdThis;
+    if (denominator % gcdThis == 0) this.denominator = denominator / gcdThis;
   }
 
 
@@ -136,7 +136,7 @@ public class RationalNumber extends RealNumber
   *Return a new RationalNumber that this minus the other
   */
   public RationalNumber subtract(RationalNumber other){
-    RationalNumber sub = new RationalNumber(getNumerator() * other.getDenominator() - other.getNumerator() * getDenominator(),
+    RationalNumber sub = new RationalNumber(getNumerator() * other.getDenominator() - (other.getNumerator() * getDenominator()),
                                             getDenominator() * other.getDenominator());
     sub.reduce();
     return sub;
