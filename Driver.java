@@ -15,21 +15,21 @@ public class Driver{
 
     System.out.println("raN1 is: " + raN1); //raN1 is: 3/4
     System.out.println("raN1 is: " + raN1.getValue()); //raN1 is: .75
-    System.out.println("raN2 is: " + raN2); //raN2 is: 3/1
+    System.out.println("raN2 is: " + raN2); //raN2 is: 3.0
     System.out.println("raN2 is: " + raN2.getValue()); //raN2 is: 3.0
-    System.out.println("raN3 is: " + raN3); //raN3 is: 0/1
+    System.out.println("raN3 is: " + raN3); //raN3 is: 0.0
     System.out.println("raN3 is: " + raN3.getValue()); //raN3 is: 0.0
 
     System.out.println("the sum of rN1 and rN2 is: " + rN1.add(rN2)); //the sum of rN1 and rN2 is: 19.0
     System.out.println("the difference of rN1 and rN2 is: " + rN1.subtract(rN2)); //the difference of rN1 and rN2 is: -17.0
     System.out.println("the product of rN1 and rN2 is: " + rN1.multiply(rN2)); //the product of rN1 and rN2 is: 18.0
-    System.out.println("the quotient of rN1 and rN2 is: " + rN1.divide(rN2)); //the quotient of rN1 and rN2 is: .055555...
+    System.out.println("the quotient of rN1 and rN2 is: " + rN1.divide(rN2)); //the quotient of rN1 and rN2 is: 0.055555...
 
     System.out.println("the sum of raN1 and raN2 is: " + raN1.add(raN2)); //the sum of raN1 and raN2 is: 15/4
     System.out.println("the difference of raN1 and raN2 is: " + raN1.subtract(raN2)); //the difference of raN1 and raN2 is: -9/4
     System.out.println("the product of raN1 and raN2 is: " + raN1.multiply(raN2)); //the product of raN1 and raN2 is: 9/4
     System.out.println("the quotient of raN1 and raN2 is: " + raN1.divide(raN2)); //the quotient of raN1 and raN2 is: 1/4
-//    System.out.println("the quotient of raN1 and raN3 is: " + raN1.divide(raN3)); //should return an error because I would be dividing by 0.
+    System.out.println("the quotient of raN1 and raN3 is: " + raN1.divide(raN3)); //the quotient of raN1 and raN3 is: 0.0
 
     //------------------------Only rationalNumber methods---------------------------
     System.out.println("reciprocal of raN1: " + raN1.reciprocal());//reciprocal of raN1: 4/3
@@ -39,6 +39,7 @@ public class Driver{
     System.out.println("does raN1 = raN2? " + raN1.equals(raN2));//does raN1 = raN2? false
     System.out.println("does raN1 = raN3? " + raN1.equals(raN3));//does raN1 = raN3? false
     System.out.println("does raN2 = raN3? " + raN2.equals(raN3));//does raN2 = raN3? false
+    System.out.println("does raN1 = raN1? " + raN1.equals(raN1));//does raN1 = raN1? true
 
     System.out.println("numerator of raN1: " + raN1.getNumerator());//numerator of raN1: 3
     System.out.println("numerator of raN2: " + raN2.getNumerator());//numerator of raN2: 3
