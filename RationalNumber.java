@@ -97,8 +97,10 @@ public class RationalNumber extends RealNumber
   */
   private void reduce(){
     int gcdThis = gcd(getNumerator(), getDenominator());
-    if (numerator % gcdThis == 0) this.numerator = numerator / gcdThis;
-    if (denominator % gcdThis == 0) this.denominator = denominator / gcdThis;
+    if (numerator % gcdThis == 0) {
+      this.numerator = numerator / gcdThis;
+      this.denominator = denominator / gcdThis;
+    }
   }
 
 
