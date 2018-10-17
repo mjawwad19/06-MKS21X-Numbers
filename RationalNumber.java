@@ -59,7 +59,7 @@ public class RationalNumber extends RealNumber
   */
   public String toString(){
     if (getDenominator() == 1) return "" + (double) getNumerator();
-    else if (getDenominator() < 0) return -1 * (getNumerator()) + "/" + getDenominator();
+    else if (getDenominator() < 0) return -1 * (getNumerator()) + "/" + -1* (getDenominator());
     else return getNumerator() + "/" + getDenominator();
   }
 
