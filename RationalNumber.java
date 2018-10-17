@@ -72,6 +72,7 @@ public class RationalNumber extends RealNumber
     secondI = 0;
     rem = 0;
     if (a == b) return a;
+    if (a == 0) return b;
     if (a > b) {
       firstI = a;
       secondI = b;
@@ -97,7 +98,7 @@ public class RationalNumber extends RealNumber
   */
   private void reduce(){
     int gcdThis = gcd(getNumerator(), getDenominator());
-    if (numerator % gcdThis == 0) {
+    if (numerator % gcdThis == 0 ) {
       this.numerator = numerator / gcdThis;
       this.denominator = denominator / gcdThis;
     }
