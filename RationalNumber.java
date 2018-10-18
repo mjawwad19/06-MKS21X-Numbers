@@ -21,8 +21,8 @@ public class RationalNumber extends RealNumber
   }
 
   public double getValue(){
-    if (numerator == 0) return 0.0;
-    else if (denominator == 1) return numerator;
+    if (denominator == 1) return numerator;
+    if (denominator == -1) return -1* numerator;
     else return (double) numerator / denominator;
     // making the numerator into a double will force the answer to be double
   }
@@ -31,13 +31,15 @@ public class RationalNumber extends RealNumber
   *@return the numerator
   */
   public int getNumerator(){
-    return numerator;
+    if (denominator == -1) return -1 * numerator;
+    else return numerator;
   }
   /**
   *@return the denominator
   */
   public int getDenominator(){
-    return denominator;
+    if (denominator == -1) return -1 * denominator;
+    else return denominator;
   }
   /**
   *@return a new RationalNumber that has the same numerator
@@ -59,7 +61,8 @@ public class RationalNumber extends RealNumber
   */
   public String toString(){
     if (getDenominator() == 1) return "" + (double) getNumerator();
-    else if (getDenominator() < 0) return -1 * (getNumerator()) + "/" + -1* (getDenominator());
+    else if (getDenominator() == -1) return "" + (double) -1 * getNumerator();
+    else if (getDenominator() < -1) return -1 * (getNumerator()) + "/" + -1* (getDenominator());
     else return getNumerator() + "/" + getDenominator();
   }
 
