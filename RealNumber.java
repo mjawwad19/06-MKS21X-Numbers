@@ -4,7 +4,9 @@ public class RealNumber{
   public RealNumber(double v){
     value = v;
   }
-
+  public double getValue(){
+    return value;
+  }
   /*
   *Return the sum of this and the other
   */
@@ -30,14 +32,7 @@ public class RealNumber{
     return this.getValue() - other.getValue();
   }
 
-
-  public double getValue(){
-    return value;
-  }
-
   public String toString(){
-    return ""+value;
+    return ""+getValue();
   }
 }
-
-
