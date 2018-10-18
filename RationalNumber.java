@@ -1,7 +1,6 @@
 public class RationalNumber extends RealNumber
 {
-  private int numerator;
-  private int denominator;
+  private int numerator, denominator;
 
   /**Initialize the RationalNumber with the provided values
     if the denominator is 0, make the fraction 0/1 instead
